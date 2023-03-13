@@ -1,4 +1,4 @@
-import useSWR from "swr";
+import useSWR from 'swr';
 
 interface IUser {
   age: number;
@@ -15,7 +15,7 @@ const useUser = () => {
     return response.json();
   };
 
-  const { data, error, isLoading } = useSWR("/api/user", fetcher);
+  const { data, error, isLoading } = useSWR('/api/user', fetcher);
 
   return {
     user: data,
