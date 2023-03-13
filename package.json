@@ -2,8 +2,14 @@
   "name": "next-ts",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=14.0.0",
+    "pnpm": ">=7.20.0",
+    "yarn": "please-use-pnpm",
+    "npm": "please-use-pnpm"
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,7 +17,8 @@
   "dependencies": {
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "swr": "^2.1.0"
   },
   "devDependencies": {
     "@types/node": "18.15.1",
