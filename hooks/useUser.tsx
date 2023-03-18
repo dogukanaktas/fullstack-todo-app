@@ -1,5 +1,4 @@
 import useSWR from 'swr';
-
 interface IUser {
   age: number;
   name: string;
@@ -7,10 +6,7 @@ interface IUser {
 }
 
 const useUser = () => {
-  const fetcher = async (
-    input: RequestInfo,
-    init: RequestInit
-  ): Promise<IUser> => {
+  const fetcher = async (input: string, init?: RequestInit): Promise<IUser> => {
     const response = await fetch(input, init);
     return response.json();
   };
