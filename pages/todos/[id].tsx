@@ -5,7 +5,7 @@ import { getTodo, getTodos } from '../../lib/getData';
 const Todos: NextPage<{ todo: Todo }> = ({ todo }) => {
   return (
     <div>
-      <p>{todo.id}</p>
+      <p>{todo._id}</p>
       <p>{todo.completed ? 'completed' : 'not completed'}</p>
       <p>{todo.title}</p>
     </div>
@@ -14,7 +14,7 @@ const Todos: NextPage<{ todo: Todo }> = ({ todo }) => {
 
 export const getStaticPaths = async () => {
   const todos = (await getTodos()) || [];
-  const paths = todos.map(({ id }) => ({ params: { id: id.toString() } }));
+  const paths = todos.map(({ _id }) => ({ params: { id: _id.toString() } }));
 
   return {
     paths,
