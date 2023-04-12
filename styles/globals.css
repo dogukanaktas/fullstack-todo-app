@@ -13,3 +13,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.todo-row {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.todo-row span:nth-child(2) {
+  font-weight: 600;
+  width: 250px;
+}
